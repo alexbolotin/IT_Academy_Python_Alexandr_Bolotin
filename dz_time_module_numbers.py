@@ -12,12 +12,20 @@ def number_dict(x,n):
 a = '\u2B1B'
 
 a_point_0 = '\u2B1B'
-a_point_1 = '\u2B1C'
-a_point_2 = '\u2B1B'
-a_point_3 = '\u2B1C'
+a_point_1 = '\u2B1B'
+a_point_2 = '\u2B1C'
+a_point_3 = '\u2B1B'
 a_point_4 = '\u2B1B'
 n_point = 1
 a_point = number_dict(sum_number(a_point_0,a_point_1,a_point_2,a_point_3,a_point_4),n_point)
+
+a_zero_0 = '\u2B1B'
+a_zero_1 = '\u2B1C'
+a_zero_2 = '\u2B1B'
+a_zero_3 = '\u2B1C'
+a_zero_4 = '\u2B1B'
+n_zero = 1
+a_zero = number_dict(sum_number(a_zero_0,a_zero_1,a_zero_2,a_zero_3,a_zero_4),n_zero)
 
 a_0_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 a_0_1 = '\u2B1C\u2B1B\u2B1B\u2B1C'

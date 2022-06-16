@@ -1,12 +1,12 @@
 import datetime
+import time
 import dz_time_module_numbers as nu
 import os
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
-
-def if_else(x_in):
+def if_else(x_in,mig):
     if x_in == '0':
         x_out = nu.a_0
     elif x_in == '1':
@@ -28,10 +28,15 @@ def if_else(x_in):
     elif x_in == '9':
         x_out = nu.a_9
     elif x_in == ':':
-        x_out = nu.a_point
+        if (mig%2) == 0:
+            x_out = nu.a_point
+        else:
+            x_out = nu.a_zero
     return x_out
-
+    
+mig = 0
 while True:
+    time.sleep(1)
     cls()
     x = datetime.datetime.now()
     x1 = x.strftime("%H:%M:%S")
@@ -42,7 +47,7 @@ while True:
 
     x4 = {}
     for i in range(0,8):
-        x4[i] = if_else(x3[i])
+        x4[i] = if_else(x3[i],mig)
 
     finish = ''
     for j in range(0,5):
@@ -50,4 +55,4 @@ while True:
             finish += nu.a + x4[i][j] + nu.a
         print(finish)
         finish = ''
- 
+    mig +=1
