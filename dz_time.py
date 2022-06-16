@@ -4,9 +4,9 @@ import os
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
-cls()
 
-def if_else(x_in,i):
+
+def if_else(x_in):
     if x_in == '0':
         x_out = nu.a_0
     elif x_in == '1':
@@ -31,22 +31,23 @@ def if_else(x_in,i):
         x_out = nu.a_point
     return x_out
 
-x = datetime.datetime.now()
-x1 = x.strftime("%H:%M:%S")
-# print(x1) 
-x3 = {}
-for i in range(len(x1)):
-    x3[i] = x1[i]
-# print(x3)
+while True:
+    cls()
+    x = datetime.datetime.now()
+    x1 = x.strftime("%H:%M:%S")
 
-x4 = {}
-for i in range(0,8):
-    x4[i] = if_else(x3[i],i)
+    x3 = {}
+    for i in range(len(x1)):
+        x3[i] = x1[i]
 
-finish = ''
-for j in range(0,5):
+    x4 = {}
     for i in range(0,8):
-        finish += nu.a + x4[i][j] + nu.a
-    print(finish)
+        x4[i] = if_else(x3[i])
+
     finish = ''
+    for j in range(0,5):
+        for i in range(0,8):
+            finish += nu.a + x4[i][j] + nu.a
+        print(finish)
+        finish = ''
  

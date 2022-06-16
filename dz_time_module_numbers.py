@@ -98,11 +98,3 @@ a_9_3 = '\u2B1B\u2B1B\u2B1B\u2B1C'
 a_9_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 n_9 = 4
 a_9 = number_dict(sum_number(a_9_0,a_9_1,a_9_2,a_9_3,a_9_4),n_9)
-
-# for i in range(5):
-#     print(a_0[i] + a + a_1[i] + a + a_point[i] + a + a_2[i]+ a + a_3[i] + a + a_point[i] + a +
-#     a_4[i] + a + a_5[i] + a + a_point[i] + a + a_6[i] + a + a_7[i] + a + a_point[i] + a + a_8[i]+ a + a_9[i])
-# print('\n')
-# for i in range(5):
-#     print(a_1[i] + a + a_0[i] + a + a_point[i] + a + a_2[i]+ a + a_3[i] + a + a_point[i] + a +
-#     a_1[i] + a + a_6[i] + a + a_point[i] + a + a_0[i] + a + a_6[i] + a + a_point[i] + a + a_2[i]+ a + a_2[i])
