@@ -3,6 +3,11 @@ import time
 import dz_time_module_numbers as nu
 import os
 
+def genetator(mig):
+     for i in range(10000):
+        mig += 1
+        yield mig  
+
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
@@ -34,7 +39,9 @@ def if_else(x_in,mig):
             x_out = nu.a_zero
     return x_out
     
-mig = 0
+mig = 0 
+m = genetator(mig)
+
 while True:
     time.sleep(1)
     cls()
@@ -55,4 +62,4 @@ while True:
             finish += nu.a + x4[i][j] + nu.a
         print(finish)
         finish = ''
-    mig +=1
+    mig = next(m)
