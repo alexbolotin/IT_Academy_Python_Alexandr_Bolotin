@@ -17,12 +17,12 @@ a_0_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 n_0 = 4
 a_0 = number_dict(sum_number(a_0_0,a_0_1,a_0_2,a_0_3,a_0_4),n_0)
 
-a_1_0 = '\u2B1C\u2B1C'
-a_1_1 = '\u2B1B\u2B1C'
-a_1_2 = '\u2B1B\u2B1C'
-a_1_3 = '\u2B1B\u2B1C'
-a_1_4 = '\u2B1B\u2B1C'
-n_1 = 2
+a_1_0 = '\u2B1C\u2B1C\u2B1B\u2B1B'
+a_1_1 = '\u2B1B\u2B1C\u2B1B\u2B1B'
+a_1_2 = '\u2B1B\u2B1C\u2B1B\u2B1B'
+a_1_3 = '\u2B1B\u2B1C\u2B1B\u2B1B'
+a_1_4 = '\u2B1C\u2B1C\u2B1C\u2B1B'
+n_1 = 4
 a_1 = number_dict(sum_number(a_1_0,a_1_1,a_1_2,a_1_3,a_1_4),n_1)
 
 a_2_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
