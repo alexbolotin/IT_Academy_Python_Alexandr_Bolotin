@@ -33,12 +33,12 @@ a_2_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 n_2 = 4
 a_2 = number_dict(sum_number(a_2_0,a_2_1,a_2_2,a_2_3,a_2_4),n_2)
 
-a_3_0 = '\u2B1C\u2B1C\u2B1C'
-a_3_1 = '\u2B1B\u2B1B\u2B1C'
-a_3_2 = '\u2B1C\u2B1C\u2B1C'
-a_3_3 = '\u2B1B\u2B1B\u2B1C'
-a_3_4 = '\u2B1C\u2B1C\u2B1C'
-n_3 = 3
+a_3_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
+a_3_1 = '\u2B1B\u2B1B\u2B1B\u2B1C'
+a_3_2 = '\u2B1C\u2B1C\u2B1C\u2B1C'
+a_3_3 = '\u2B1B\u2B1B\u2B1B\u2B1C'
+a_3_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
+n_3 = 4
 a_3 = number_dict(sum_number(a_3_0,a_3_1,a_3_2,a_3_3,a_3_4),n_3)
 
 a_4_0 = '\u2B1C\u2B1B\u2B1B\u2B1C'
@@ -65,12 +65,12 @@ a_6_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 n_6 = 4
 a_6 = number_dict(sum_number(a_6_0,a_6_1,a_6_2,a_6_3,a_6_4),n_6)
 
-a_7_0 = '\u2B1C\u2B1C\u2B1C'
-a_7_1 = '\u2B1B\u2B1B\u2B1C'
-a_7_2 = '\u2B1B\u2B1C\u2B1B'
-a_7_3 = '\u2B1B\u2B1C\u2B1B'
-a_7_4 = '\u2B1B\u2B1C\u2B1B'
-n_7 = 3
+a_7_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
+a_7_1 = '\u2B1B\u2B1B\u2B1B\u2B1C'
+a_7_2 = '\u2B1B\u2B1B\u2B1C\u2B1B'
+a_7_3 = '\u2B1B\u2B1C\u2B1B\u2B1B'
+a_7_4 = '\u2B1B\u2B1C\u2B1B\u2B1B'
+n_7 = 4
 a_7 = number_dict(sum_number(a_7_0,a_7_1,a_7_2,a_7_3,a_7_4),n_7)
 
 a_8_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
