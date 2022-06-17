@@ -9,24 +9,6 @@ def number_dict(x,n):
         s +=n
     return x_dict
 
-a = '\u2B1B'
-
-a_point_0 = '\u2B1B'
-a_point_1 = '\u2B1B'
-a_point_2 = '\u2B1C'
-a_point_3 = '\u2B1B'
-a_point_4 = '\u2B1B'
-n_point = 1
-a_point = number_dict(sum_number(a_point_0,a_point_1,a_point_2,a_point_3,a_point_4),n_point)
-
-a_zero_0 = '\u2B1B'
-a_zero_1 = '\u2B1C'
-a_zero_2 = '\u2B1B'
-a_zero_3 = '\u2B1C'
-a_zero_4 = '\u2B1B'
-n_zero = 1
-a_zero = number_dict(sum_number(a_zero_0,a_zero_1,a_zero_2,a_zero_3,a_zero_4),n_zero)
-
 a_0_0 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 a_0_1 = '\u2B1C\u2B1B\u2B1B\u2B1C'
 a_0_2 = '\u2B1C\u2B1B\u2B1B\u2B1C'
@@ -86,8 +68,8 @@ a_6 = number_dict(sum_number(a_6_0,a_6_1,a_6_2,a_6_3,a_6_4),n_6)
 a_7_0 = '\u2B1C\u2B1C\u2B1C'
 a_7_1 = '\u2B1B\u2B1B\u2B1C'
 a_7_2 = '\u2B1B\u2B1C\u2B1B'
-a_7_3 = '\u2B1C\u2B1B\u2B1B'
-a_7_4 = '\u2B1C\u2B1B\u2B1B'
+a_7_3 = '\u2B1B\u2B1C\u2B1B'
+a_7_4 = '\u2B1B\u2B1C\u2B1B'
 n_7 = 3
 a_7 = number_dict(sum_number(a_7_0,a_7_1,a_7_2,a_7_3,a_7_4),n_7)
 
@@ -106,3 +88,68 @@ a_9_3 = '\u2B1B\u2B1B\u2B1B\u2B1C'
 a_9_4 = '\u2B1C\u2B1C\u2B1C\u2B1C'
 n_9 = 4
 a_9 = number_dict(sum_number(a_9_0,a_9_1,a_9_2,a_9_3,a_9_4),n_9)
+
+# nothing
+a = '\u2B1B'
+
+# dot
+a_point_0 = '\u2B1B'
+a_point_1 = '\u2B1B'
+a_point_2 = '\u2B1C'
+a_point_3 = '\u2B1B'
+a_point_4 = '\u2B1B'
+n_point = 1
+a_point = number_dict(sum_number(a_point_0,a_point_1,a_point_2,a_point_3,a_point_4),n_point)
+# :
+a_zero_0 = '\u2B1B'
+a_zero_1 = '\u2B1C'
+a_zero_2 = '\u2B1B'
+a_zero_3 = '\u2B1C'
+a_zero_4 = '\u2B1B'
+n_zero = 1
+a_zero = number_dict(sum_number(a_zero_0,a_zero_1,a_zero_2,a_zero_3,a_zero_4),n_zero)
+
+# dot_position_0
+a_dot_0_0 = '\u2B1C'
+a_dot_0_1 = '\u2B1B'
+a_dot_0_2 = '\u2B1B'
+a_dot_0_3 = '\u2B1B'
+a_dot_0_4 = '\u2B1B'
+n_dot_0 = 1
+a_dot_0 = number_dict(sum_number(a_dot_0_0,a_dot_0_1,a_dot_0_2,a_dot_0_3,a_dot_0_4),n_dot_0)
+
+# dot_position_1
+a_dot_1_0 = '\u2B1B'
+a_dot_1_1 = '\u2B1C'
+a_dot_1_2 = '\u2B1B'
+a_dot_1_3 = '\u2B1B'
+a_dot_1_4 = '\u2B1B'
+n_dot_1 = 1
+a_dot_1 = number_dict(sum_number(a_dot_1_0,a_dot_1_1,a_dot_1_2,a_dot_1_3,a_dot_1_4),n_dot_1)
+
+# dot_position_2
+a_dot_2_0 = '\u2B1B'
+a_dot_2_1 = '\u2B1B'
+a_dot_2_2 = '\u2B1C'
+a_dot_2_3 = '\u2B1B'
+a_dot_2_4 = '\u2B1B'
+n_dot_2 = 1
+a_dot_2 = number_dict(sum_number(a_dot_2_0,a_dot_2_1,a_dot_2_2,a_dot_2_3,a_dot_2_4),n_dot_2)
+
+# dot_position_3
+a_dot_3_0 = '\u2B1B'
+a_dot_3_1 = '\u2B1B'
+a_dot_3_2 = '\u2B1B'
+a_dot_3_3 = '\u2B1C'
+a_dot_3_4 = '\u2B1B'
+n_dot_3 = 1
+a_dot_3 = number_dict(sum_number(a_dot_3_0,a_dot_3_1,a_dot_3_2,a_dot_3_3,a_dot_3_4),n_dot_3)
+
+# dot_position_4
+a_dot_4_0 = '\u2B1B'
+a_dot_4_1 = '\u2B1B'
+a_dot_4_2 = '\u2B1B'
+a_dot_4_3 = '\u2B1B'
+a_dot_4_4 = '\u2B1C'
+n_dot_4 = 1
+a_dot_4 = number_dict(sum_number(a_dot_4_0,a_dot_4_1,a_dot_4_2,a_dot_4_3,a_dot_4_4),n_dot_4)
