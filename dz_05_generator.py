@@ -2,18 +2,14 @@
 # но ! если генерируемый элемент делится на 3 без остатка - возвращает вместо него "Василий"
 
 def genetator(x):
-     for i in range(10000):
+     for i in range(20):
         x += 1
         yield x  
 
-x = 0
-n = genetator(x)
-
-for i in range(0,20):
-    n1 = (next(n))
-    if n1%3 == 0:
-        print(n1, '- Василий')
-    elif n1%2 == 0:
-        print(n1, '- Георгий')
+for i in genetator(0):
+    if i%3 == 0:
+        print(i, '- Василий')
+    elif i%2 == 0:
+        print(i, '- Георгий')
     else:
-        print(n1, '- Иннокентий')
+        print(i, '- Иннокентий')
