@@ -161,10 +161,3 @@ a_dot_4_3 = '\u2B1B'
 a_dot_4_4 = u"\U0001F7E9"
 n_dot_4 = 1
 a_dot_4 = number_dict(sum_number(a_dot_4_0,a_dot_4_1,a_dot_4_2,a_dot_4_3,a_dot_4_4),n_dot_4)
-
-# a_dict_all = {0:a_0,1:a_1,2:a_2,3:a_3,4:a_4,5:a_5,6:a_6,7:a_7,8:a_8,9:a_9}
-
-# item = 1
-# index = sum_number(a_dot_4_0,a_dot_4_1,a_dot_4_2,a_dot_4_3,a_dot_4_4)(item)
-
-# print(index)
