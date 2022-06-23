@@ -47,25 +47,27 @@ def if_else(x_in,mig):
     
 mig = 0 
 m = genetator(mig)
+number_column = nu.number_column_1
 
 while True:
     time.sleep(0.1)
     cls()
-    x = datetime.datetime.now()
-    x1 = x.strftime("%H:%M:%S")
+    clock = datetime.datetime.now()
+    time_str = clock.strftime("%H:%M:%S")
+    len_time = len(time_str)
 
-    x3 = {}
-    for i in range(len(x1)):
-        x3[i] = x1[i]
+    time_dict = {}
+    for i in range(len(time_str)):
+        time_dict[i] = time_str[i]
 
-    x4 = {}
-    for i in range(0,8):
-        x4[i] = if_else(x3[i],mig)
+    time_dict_paint_numers = {}
+    for i in range(0,len_time):
+        time_dict_paint_numers[i] = if_else(time_dict[i],mig)
 
     finish = ''
-    for j in range(0,5):
-        for i in range(0,8):
-            finish += nu.a + x4[i][j] + nu.a
+    for j in range(0,number_column):
+        for i in range(0,len_time):
+            finish += nu.a + time_dict_paint_numers[i][j] + nu.a
         print(finish)
         finish = ''
     mig = next(m)
