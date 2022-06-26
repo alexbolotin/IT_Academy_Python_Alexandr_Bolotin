@@ -6,7 +6,7 @@ the_board_2 = [i for i in range(1,10)]
 menu_answers = {'1':'statistic','2':'playgame'}
 is_the_user_x = True
 is_the_user_0 = False
-player_number_x_or_0 = {True: 'X', False: '0'}
+player_number_x_or_0 = {True: 'X', False: 'O'}
 move = False
 statistic_game = {'X':0, 'O':0, 'draw':0}
 
@@ -107,14 +107,14 @@ def write_read_statistic(do):
         stat = f'X = {x}; 0 = {O}; Draw = {draw} Last game: {time_str};'
         with open('tic-tac-toe.txt', encoding='utf-8', mode='w') as file:
             file.write(stat)
-        return stat
+        return None
     elif do == 'read':
         with open('tic-tac-toe.txt', encoding='utf-8') as file:
             stat = str(file.readlines()).split(';')
         x = statistic_game['X']
         O = statistic_game['O']
         draw = statistic_game['draw']
-        stat = f'X = {x}; 0 = {O}; Draw = {draw} Last game: {time_str};'
+        stat = f'Player X = {x}; Player O = {O}; Draw = {draw} Last game: {time_str};'
         return stat
 
 def show_statistic():
