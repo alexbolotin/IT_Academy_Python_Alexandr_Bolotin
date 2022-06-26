@@ -1,5 +1,5 @@
 import os
-
+import datetime
 
 the_board = [i for i in range(1,10)]
 the_board_2 = [i for i in range(1,10)]
@@ -8,7 +8,7 @@ is_the_user_x = True
 is_the_user_0 = False
 player_number_x_or_0 = {True: 'X', False: '0'}
 move = False
-statistic_game = {'X':0, '0':0}
+statistic_game = {'X':0, 'O':0, 'draw':0}
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
@@ -81,24 +81,52 @@ def get_user_turn():
                 print('End the game\n')
                 print('Its a DRAW!')
                 turn = 'finish'
+                statistic_game['draw'] += 1
+                write_read_statistic('write')
                 return turn
 
             elif result == 'finish':
                 print('End the game\n')
                 print(f'Winner is Player {player_number_x_or_0.get(move)}!')
                 statistic_game[player_number_x_or_0.get(move)] += 1
+                write_read_statistic('write')
                 turn = 'finish'
                 return turn
         except:
             print('Enter correct value')
             move = change_player(move) 
 
+def write_read_statistic(do):
+    clock = datetime.datetime.now()
+    time_str = clock.strftime("%H:%M:%S - %d/%m/%y")
   
+    if do == 'write':
+        x = statistic_game['X']
+        O = statistic_game['O']
+        draw = statistic_game['draw']
+        stat = f'X = {x}; 0 = {O}; Draw = {draw} Last game: {time_str};'
+        with open('tic-tac-toe.txt', encoding='utf-8', mode='w') as file:
+            file.write(stat)
+        return stat
+    elif do == 'read':
+        with open('tic-tac-toe.txt', encoding='utf-8') as file:
+            stat = str(file.readlines()).split(';')
+        x = statistic_game['X']
+        O = statistic_game['O']
+        draw = statistic_game['draw']
+        stat = f'X = {x}; 0 = {O}; Draw = {draw} Last game: {time_str};'
+        return stat
+
 def show_statistic():
     print('Showing statistic:')
-    print(statistic_game)
-    input('Lets continue? :)\nPush any buttom\n')
-    main()
+    if statistic_game['X'] == 0 and statistic_game['O'] == 0 and statistic_game['draw'] == 0:
+        print('Havent played a game yet, shall we play?')
+        input('Push any buttom\n')
+        main()
+    else:
+        print(write_read_statistic('read'))
+        input('Lets continue? :)\nPush any buttom\n')
+        main()
 
 def play_the_game():
     show_the_board()
