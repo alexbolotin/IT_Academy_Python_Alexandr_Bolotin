@@ -5,10 +5,8 @@ the_board = [i for i in range(1,10)]
 the_board_2 = [i for i in range(1,10)]
 menu_answers = {'1':'statistic','2':'playgame'}
 is_the_user_x = True
-is_the_user_0 = False
 player_number_x_or_0 = {True: 'X', False: 'O'}
 move = False
-statistic_game = {'X':0, 'O':0, 'draw':0}
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
@@ -81,52 +79,66 @@ def get_user_turn():
                 print('End the game\n')
                 print('Its a DRAW!')
                 turn = 'finish'
-                statistic_game['draw'] += 1
-                write_read_statistic('write')
+                write_read_statistic('write','draw')
                 return turn
 
             elif result == 'finish':
-                print('End the game\n')
+                print('End the game')
                 print(f'Winner is Player {player_number_x_or_0.get(move)}!')
-                statistic_game[player_number_x_or_0.get(move)] += 1
-                write_read_statistic('write')
+                write_read_statistic('write', f'{player_number_x_or_0.get(move)}')
                 turn = 'finish'
                 return turn
         except:
             print('Enter correct value')
             move = change_player(move) 
 
-def write_read_statistic(do):
+def write_read_statistic(do, result = None):
     clock = datetime.datetime.now()
     time_str = clock.strftime("%H:%M:%S - %d/%m/%y")
   
     if do == 'write':
-        x = statistic_game['X']
-        O = statistic_game['O']
-        draw = statistic_game['draw']
-        stat = f'X = {x}; 0 = {O}; Draw = {draw} Last game: {time_str};'
-        with open('tic-tac-toe.txt', encoding='utf-8', mode='w') as file:
+        stat = write_read_statistic('read')
+        stat_1 = stat.split(';')
+        x = stat_1[0][11:]
+        O = stat_1[1][12:]
+        draw = stat_1[2][8:]
+
+        if result == 'X': x = int(x) + 1
+        elif result == 'O': O = int(O) + 1
+        elif result == 'draw': draw = int(draw) + 1
+        else: pass
+
+        stat = f'\nPlayer X = {x}; Player O = {O}; Draw = {draw}; Last game: {time_str};'
+        
+        with open('tic-tac-toe.txt', encoding='utf-8', mode='r+') as file:
+            file.seek(0,2)
             file.write(stat)
         return None
+    
     elif do == 'read':
-        with open('tic-tac-toe.txt', encoding='utf-8') as file:
-            stat = str(file.readlines()).split(';')
-        x = statistic_game['X']
-        O = statistic_game['O']
-        draw = statistic_game['draw']
-        stat = f'Player X = {x}; Player O = {O}; Draw = {draw} Last game: {time_str};'
-        return stat
+        try:
+            with open('tic-tac-toe.txt', encoding='utf-8') as file:
+                stat = str(file.readlines()[-1]).split(';')
+            x = stat[0][11:]
+            O = stat[1][12:]
+            draw = stat[2][8:]  
+            stat = f'Player X = {x}; Player O = {O}; Draw = {draw}; Last game: {time_str};'  
+            return stat
+        except:
+
+            stat = f'\nPlayer X = 0; Player O = 0; Draw = 0; Last game: {time_str};'
+            with open('tic-tac-toe.txt', encoding='utf-8', mode='w') as file:
+                file.write(stat)
+            print('No statistics yet, want to get started?')
+            input('Push any buttom\n')
+            main()
+
 
 def show_statistic():
     print('Showing statistic:')
-    if statistic_game['X'] == 0 and statistic_game['O'] == 0 and statistic_game['draw'] == 0:
-        print('Havent played a game yet, shall we play?')
-        input('Push any buttom\n')
-        main()
-    else:
-        print(write_read_statistic('read'))
-        input('Lets continue? :)\nPush any buttom\n')
-        main()
+    print(write_read_statistic('read'))
+    input('Lets continue? :)\nPush any buttom\n')
+    main()
 
 def play_the_game():
     show_the_board()
